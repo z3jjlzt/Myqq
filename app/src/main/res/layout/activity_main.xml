@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <include layout="@layout/message_layout"
+            android:id="@+id/tab_message"/>
+
+        <include layout="@layout/contacts_layout"
+                 android:id="@+id/tab_contacts"/>
+
+        <include layout="@layout/news_layout"
+                 android:id="@+id/tab_news"/>
+
+        <include layout="@layout/setting_layout"
+                 android:id="@+id/tab_setting"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#123456"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/head_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <LinearLayout
+            android:id="@+id/info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/head_iv"
+            android:layout_toRightOf="@id/head_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nick_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:text="nick"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/sign_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="sign"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_ll"
+        android:layout_below="@id/ll_top"/>
+
+</RelativeLayout>

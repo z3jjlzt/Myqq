@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/bg_login"
+              android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:background="@drawable/bg_regist"
+        android:padding="15dip">
+
+        <!-- 账号 -->
+
+
+        <TextView
+            android:id="@+id/register_user_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="帐号"/>
+
+        <EditText
+            android:id="@+id/username_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_user_input"
+            android:background="@drawable/bg_edittext"
+            android:hint="username"
+            android:inputType="text"
+            android:text=""
+            android:padding="5dp"
+            android:singleLine="true"/>
+
+        <!-- 密码 text -->
+
+
+        <TextView
+            android:id="@+id/register_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_edit"
+            android:layout_marginTop="3dp"
+            android:text="密码"/>
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_password_input"
+            android:background="@drawable/bg_edittext"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:password="true"
+            android:text=""
+            android:singleLine="true"/>
+
+        <!-- 登录button -->
+
+        <Button
+            android:id="@+id/commit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登入"
+            android:layout_below="@+id/password_edit"
+            android:layout_alignLeft="@+id/password_edit"
+            android:layout_alignStart="@+id/password_edit"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_register"
+            android:text="注册"
+            android:layout_below="@+id/password_edit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
